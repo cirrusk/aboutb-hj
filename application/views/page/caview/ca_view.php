@@ -11,8 +11,8 @@
 		$result4 = $conn->query($sql);
 		$dataCount = $result3->num_rows;
 
-		echo "데이터 갯수?";
-		echo $dataCount;
+		// echo "데이터 갯수?";
+		// echo $dataCount;
 		
 		
 		?>
@@ -79,6 +79,7 @@
 
 
 					</div>
+					
 				</div>
 			</div>
 			<table class="ca-main-right">

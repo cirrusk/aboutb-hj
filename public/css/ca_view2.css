@@ -74,7 +74,7 @@ tbody>tr:last-child{
 	left: 0;
 	width: 15px;
 	height: 6px;
-	background-color: #00adb5;
+	background-color: #f05a28;
 }
 .ca-main-right2{
 	width: 710px;
@@ -130,13 +130,13 @@ tbody>tr:last-child{
 	font-weight: 500;
 }
 .point-color{
-	color: #fc5185;
+	color: #f05a28;
 }
 .ca-bg-tit{
 	background-color: #fafafa;
 }
 .ca-bg-point{
-	background-color: rgba(0,173,181,0.2);
+	background-color: rgba(240,90,40,0.2);
 }
 .ca-bg-point{
 	font-weight: 500;
@@ -195,13 +195,13 @@ tr.space>td{
 .ca-header-right li{
 	text-align: center;
 	width: 80px;
-	border: 1px solid #0278ae;
+	border: 1px solid #f05a28;
 	margin-right: 10px;
 }
 .ca-header-right a{
 	padding-left: 23px;
 	line-height: 25px;
-	color: #0278ae;
+	color: #f05a28;
 	font-weight: 500;
 }
 .ca-header-right>ul>li:last-child{
@@ -209,7 +209,7 @@ tr.space>td{
 }
 /* ca-right Hover */
 .ca-header-right li:hover{
-	background-color: #0278ae;
+	background-color: #f05a28;
 }
 .ca-header-right li:hover a{
 	color: #fff;
@@ -240,7 +240,7 @@ tr.space>td{
 	cursor: pointer;
 }
 .ca-close:hover{
-	color: #0278ae;
+	color: #f05a28;
 	font-weight: 500
 }
 
@@ -346,12 +346,12 @@ tr.space>td{
 	left: 0;
 	width: 15px;
 	height: 6px;
-	background-color: #00adb5;
+	background-color: #f05a28;
 }
 .revenue-num{
 	font-size: 28px;
 	font-weight: 600;
-	color: #fc5185;
+	color: #f05a28;
 	padding-left: 50px;
 }
 .ca-cautionBox{

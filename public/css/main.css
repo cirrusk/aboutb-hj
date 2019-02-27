@@ -8,6 +8,7 @@
 /* BANNER */
 #BANNER{
 	height: 300px;
+	z-index: -1;
 }
 /* 배너 이미지 박스 */
 .roll {

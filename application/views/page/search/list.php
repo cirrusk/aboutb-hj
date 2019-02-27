@@ -1,3 +1,22 @@
+    <?php
+        $babo = $_GET['bubwonSel'];
+        $conn = mysqli_connect(
+          'aboutbserver1.mysql.database.azure.com',
+          'sajeas@aboutbserver1',
+          'vhzkfl11!',
+          'aboutb_test2');
+        $sql = "SELECT jiwon_code FROM mul_basic WHERE jiwon_code = $babo";
+        
+        $result5 = $conn->query($sql);
+        $dataCount = $result5->num_rows;
+        if($babo == 60){
+            $dataCount = 'jiwon_code가 60(전체)인 경우 DB에 60이라는 값이 없기 때문에 0건으로 나오네요! 도와주세요!';
+        }
+
+        // echo "데이터 갯수?";
+        // echo $dataCount;
+        
+        ?>
 <?php $this->load->view('template/search') ?>
 <!--CONTENTS-->
 <section id="listCont" class="ca-link">
@@ -11,7 +30,7 @@
                 <li><a href="#">조회수</a><span>▲</span></li>
             </ul>
         </div>
-        <div class="listTOP2"> <span>총 <?php ?> 건</span>
+        <div class="listTOP2"> <span style="color: red;">★<?php echo $dataCount; ?>★총 건</span>
             <div class="listStArea"> <a href="#" class="listSet">리스트조건설정</a>
                 <ul>
                     <li class="listView"></li>
@@ -23,7 +42,7 @@
         <?php foreach ($result as $key => $value) { ?>
             <div class="saListBox first-list">
             
-            <p class="saAddr"><a href="/caview?case_mul_code=<?= $value->case_mul_code ?>" onClick="window.open(this.href, '', 'width='+sw+',height='+sh+',top=0 ,left='+ml+',resizable=no, scrollbar=yes')"><?php echo $value->mul_juso ?> <?php echo $value->mul_use_type; ?></a></p>
+            <p class="saAddr"><a href="#caview" onClick="window.open('/caview?case_mul_code=<?= $value->case_mul_code ?>', '', 'width='+sw+',height='+sh+',top=0 ,left='+ml+',resizable=no, scrollbar=yes')"><?php echo $value->mul_juso ?> [<?php echo $value->mul_use_type; ?>]</a></p>
             <span class="favoriteBtn">♡</span><span class="favorite">관심물건</span> 
             <!--리스트 테이블-->
             <ul class="listTable">

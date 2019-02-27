@@ -14,3 +14,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			return '신건';
 		}
 	}
+
+	// function searchCount($case_mul_code) {
+	// 	$CI =& get_instance();
+
+	// 	$query = array();
+	// 	$result = $CI->common_m->count('mul_basic', $query);
+	// }

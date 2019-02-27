@@ -63,7 +63,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				}
 
 				// $data['result'] = $this->common_m->select('mul_basic', $query);
+				// $query2 = $this->db->query('SELECT case_mul_code FROM mul_basic');
+				// $queryCount = $query2->num_rows();
+				// echo $queryCount;
+
 				$data['result'] = $this->common_m->select('mul_basic', $query);
+				
+				
+
 
 				$this->load->library('form_validation');
 				$this->form_validation->run();

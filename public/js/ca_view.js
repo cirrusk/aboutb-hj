@@ -17,6 +17,7 @@ $(function(){
 
 	
 	// Swiper
+
 	var galleryThumbs = new Swiper('.gallery-thumbs', {
       spaceBetween: 10,
       slidesPerView: 3,
@@ -34,11 +35,5 @@ $(function(){
         swiper: galleryThumbs
       }
     });
-
-
-
-
-
-
 
 }); // jQB //
