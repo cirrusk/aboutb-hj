@@ -20,27 +20,27 @@
             </div>
         </div>
         <!-- 여기서 부터 리스트 박스 생성 -->
-        <?php foreach ($result as $key) { ?>
+        <?php foreach ($result as $key => $value) { ?>
             <div class="saListBox first-list">
-            <a href="/caview?case_mul_code=<?= $key->case_mul_code ?>">상세페이지</a>
-            <p class="saAddr"></p>
+            
+            <p class="saAddr"><a href="/caview?case_mul_code=<?= $value->case_mul_code ?>" onClick="window.open(this.href, '', 'width='+sw+',height='+sh+',top=0 ,left='+ml+',resizable=no, scrollbar=yes')"><?php echo $value->mul_juso ?> <?php echo $value->mul_use_type; ?></a></p>
             <span class="favoriteBtn">♡</span><span class="favorite">관심물건</span> 
             <!--리스트 테이블-->
             <ul class="listTable">
                 <li class="col-3 tbSbox">
                     <ul>
                         <li class="tbTit">사건번호</li>
-                        <li class="tbTxt"><?php echo $key->case_num; ?></li>
+                        <li class="tbTxt"><?php echo $value->case_num; ?>[<?php echo $value->mul_num; ?>]</li>
                         <li class="tbTit">진행현황</li>
-                        <li class="tbTxt">유찰 1회 (80%)</li>
+                        <li class="tbTxt"><?php echo get_mul_biding_end_state($value->case_mul_code); ?></li>
                         <li class="tbTit">매각기일</li>
-                        <li class="tbTxt"><?php echo $key->mul_biding_date; ?></li>
+                        <li class="tbTxt"><?php echo $value->mul_biding_date; ?></li>
                     </ul>
                 </li>
                 <li class="col-3 tbSbox">
                     <ul>
                         <li class="tbTit">물건종류</li>
-                        <li class="tbTxt"><?php echo $key->mul_use_type; ?></li>
+                        <li class="tbTxt"><?php echo $value->mul_use_type; ?></li>
                         <li class="tbTit">건물면적</li>
                         <li class="tbTxt">59.94㎡</li>
                         <li class="tbTit">대지권</li>
@@ -50,9 +50,9 @@
                 <li class="col-3 tbSbox">
                     <ul>
                         <li class="tbTit moneyTit">감정가</li>
-                        <li class="tbTxt moneyTxt gamMoney"><?php echo $key->mul_evaluate_price; ?></li>
+                        <li class="tbTxt moneyTxt gamMoney"><?php echo $value->mul_evaluate_price; ?></li>
                         <li class="tbTit moneyTit">최저가</li>
-                        <li class="tbTxt moneyTxt"><?php echo $key->mul_lowest_price; ?></li>
+                        <li class="tbTxt moneyTxt"><?php echo $value->mul_lowest_price; ?></li>
                     </ul>
                 </li>
                 <li class="col-3 tbSbox">

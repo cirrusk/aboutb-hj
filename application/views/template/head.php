@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="/public/css/toggle-switch.css">
 	<link rel="stylesheet" href="/public/css/jquery-ui-slider-pips.css">
 	<link rel="stylesheet" href="/public/css/wan-spinner.css">
+	<link rel="stylesheet" href="/public/css/swiper.css">
 	<link rel="stylesheet" href="/public/css/main.css">
 	<link rel="stylesheet" href="/public/css/list.css">
 	<link rel="stylesheet" href="/public/css/search.css">
@@ -19,6 +20,7 @@
 	<script src="/public/js/jquery.prettydropdowns.js"></script>
 	<script src="/public/js/jquery-ui-slider-pips.js"></script>
 	<script src="/public/js/wan-spinner.js"></script>
+	<script src="/public/js/swiper.js"></script>
 	<script src="/public/js/common.js"></script>
 	<script src="/public/js/main.js"></script>
 	<script src="/public/js/linksys.js"></script>

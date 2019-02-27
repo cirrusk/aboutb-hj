@@ -23,6 +23,12 @@ var bantxt = {
 	"roll r2 active" : '<p class="bantxt bantxt1">나보다 남을 생각하는 당신에게</p><p class="bantxt bantxt2">기업정신을 배웁니다</p>'
 };
 
+
+/*///////////////////////////////////////////////////////////
+	함수명: banAction
+	기능: 해당 순서의 배너에 class를 부여한 후 텍스트 애니메이션
+*///////////////////////////////////////////////////////////
+
 function banAction(){
 	$(".bantxt, .bantxt1, .bantxt2").remove();
 
@@ -31,12 +37,11 @@ function banAction(){
 	// console.log("현재배너 text는?: "+bantxt[banclass]);
 
 	$(".rollArea>div>div").eq(0).append(bantxt[banclass]);
+	$(".bantxt1").animate({top: "35%",opacity:1},1000,"easeOutSine");//아래서 위로 등장!
+	$(".bantxt2").delay(200).animate({top: "47%",opacity:1},1000,"easeOutSine");//아래서 위로 등장!
 
-}
-
-
-
-
+}// banAction 함수 ////////////////////
+//////////////////////////////////////
 
 
 /*/////////////////////////////////////////////////////

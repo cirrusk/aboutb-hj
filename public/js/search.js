@@ -89,6 +89,31 @@ $(function(){ //////////////////// jQB ////////////////////
 
 	var sViewsts = 0;
 
+	$(".plusbtn").click(function(e) {
+		e.preventDefault();
+		// $(".etc").slideToggle(300);
+
+		$(this).toggle(function(){
+			$(this).text("－").stop();
+		},function(){
+			$(this).text("＋").stop();
+		});// toggle //
+
+		
+	}); // click //
+
+	$(function() {
+		$("#show-background").toggle(function (){
+			$("#content-area").animate({opacity: '0'}, 'slow')
+			$("#show-background").text("Show Text")
+			.stop();
+		}, function(){
+			$("#content-area").animate({opacity: '1'}, 'slow')
+			$("#show-background").text("Show Background")
+			.stop();
+		});
+	});
+
 	$(".sangseView").click(function(e){
 		e.preventDefault();
 	// 	if(sViewsts = 0){

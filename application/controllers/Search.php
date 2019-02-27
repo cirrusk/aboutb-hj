@@ -41,9 +41,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					$query['or']['mul_use_type'] = '오피스텔';
 				}
 
+				$query['select'] = array(
+					'mul_basic.case_mul_code',
+					'mul_basic.case_num',
+					'mul_basic.mul_biding_date',
+					'mul_basic.mul_use_type',
+					'mul_basic.mul_evaluate_price',
+					'mul_basic.mul_lowest_price',
+					'mul_basic.mul_juso',
+					'mul_basic.mul_num'
+				);
+				
 				// 법원 검색 필터
-				$query['jiwon_code'] = $this->input->get('bubwonSel', true);
+				// $query['jiwon_code'] = $this->input->get('bubwonSel', true);
+				$bubsel = $this->input->get('bubwonSel', true);
+				if($bubsel == 60){
+					
+				}
+				else{
+					$query['jiwon_code'] = $bubsel;
+				}
 
+				// $data['result'] = $this->common_m->select('mul_basic', $query);
 				$data['result'] = $this->common_m->select('mul_basic', $query);
 
 				$this->load->library('form_validation');

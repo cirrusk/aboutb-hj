@@ -1,23 +1,3 @@
-	<?php
-		$babo = $_GET['case_mul_code'];
-		$conn = mysqli_connect(
-		  'aboutbserver1.mysql.database.azure.com',
-		  'sajeas@aboutbserver1',
-		  'vhzkfl11!',
-		  'aboutb_test2');
-  		$sql = "SELECT mul_img_url FROM mul_img WHERE case_mul_code = $babo";
-  		
-		$result3 = $conn->query($sql);
-		$result4 = $conn->query($sql);
-		$dataCount = $result3->num_rows;
-
-		echo "데이터 갯수?";
-		echo $dataCount;
-		
-		
-		?>
-		
-
 	<section id="ca-header" class="fullbox">
 		<div class="ca-inbox">
 			<div class="ca-header-left">
@@ -42,9 +22,8 @@
 				<span class="sa_num big"> <?php echo $result[0]->case_num ;?></span><br>
 				<span class="color999 font16"><?= $result[0]->case_relative_case ?></span>
 			</div>
-
 			<div class="ca-top-center">
-				<span class="sa_addr big"><?php echo $result[0]->mul_juso ;?> / </span><span class="sa_gubun big">[<?php echo $result[0]->mul_use_type; ?>]</span>
+				<span class="sa_addr big"><?php echo $result[0]->item_juso ;?> / </span><span class="sa_gubun big">[<?php echo $result[0]->mul_use_type; ?>]</span>
 			</div>
 			<div class="ca-top-right">
 				<span>누적 조회수 : </span><span class="view-count point"></span><br>
@@ -57,11 +36,16 @@
 			<div class="ca-main-left">
 				<div class="swiper-container gallery-top">
 					<div class="swiper-wrapper">
-						<?php for ($i=0; $i < $dataCount; $i++) {  
-							$img2 = $result3->fetch_array(MYSQLI_BOTH);
-						?>
-							<div class="swiper-slide" style="background-image:url(<?= $img2[0] ?>)"></div>
-						<?php } ?>
+						<div class="swiper-slide" style="background-image:url(https://aboutbstorage.blob.core.windows.net/aboutbimg/1920180130001013002001.jpg)"></div>
+						<div class="swiper-slide" style="background-image:url(https://aboutbstorage.blob.core.windows.net/aboutbimg/1920180130001310001001.jpg)"></div>
+						<div class="swiper-slide" style="background-image:url(https://aboutbstorage.blob.core.windows.net/aboutbimg/1920180130001457001001.jpg)"></div>
+						<div class="swiper-slide" style="background-image:url(https://aboutbstorage.blob.core.windows.net/aboutbimg/1920180130001471001001.jpg)"></div>
+						<div class="swiper-slide" style="background-image:url(https://aboutbstorage.blob.core.windows.net/aboutbimg/1920180130001617001001.jpg)"></div>
+						<div class="swiper-slide" style="background-image:url(https://aboutbstorage.blob.core.windows.net/aboutbimg/1920180130010253002001.jpg)"></div>
+						<div class="swiper-slide" style="background-image:url(https://aboutbstorage.blob.core.windows.net/aboutbimg/1920180130010734001001.jpg)"></div>
+						<div class="swiper-slide" style="background-image:url(https://aboutbstorage.blob.core.windows.net/aboutbimg/1920180130010758001001.jpg)"></div>
+						<div class="swiper-slide" style="background-image:url(https://aboutbstorage.blob.core.windows.net/aboutbimg/1920180130010857001001.jpg)"></div>
+						<div class="swiper-slide" style="background-image:url(https://aboutbstorage.blob.core.windows.net/aboutbimg/3620150130002695001001.jpg)"></div>
 					</div>
 					<!-- Add Arrows -->
 					<div class="swiper-button-next swiper-button-white"></div>
@@ -69,25 +53,26 @@
 				</div>
 				<div class="swiper-container gallery-thumbs">
 					<div class="swiper-wrapper">
-						
-						
-						<?php for ($i=0; $i < $dataCount; $i++) {  
-							$img = $result4->fetch_array(MYSQLI_BOTH);
-						?>
-							<div class="swiper-slide" style="background-image:url(<?= $img[0] ?>)"></div>
-						<?php } ?>
-
-
+						<div class="swiper-slide" style="background-image:url(https://aboutbstorage.blob.core.windows.net/aboutbimg/1920180130001013002001.jpg)"></div>
+						<div class="swiper-slide" style="background-image:url(https://aboutbstorage.blob.core.windows.net/aboutbimg/1920180130001310001001.jpg)"></div>
+						<div class="swiper-slide" style="background-image:url(https://aboutbstorage.blob.core.windows.net/aboutbimg/1920180130001457001001.jpg)"></div>
+						<div class="swiper-slide" style="background-image:url(https://aboutbstorage.blob.core.windows.net/aboutbimg/1920180130001471001001.jpg)"></div>
+						<div class="swiper-slide" style="background-image:url(https://aboutbstorage.blob.core.windows.net/aboutbimg/1920180130001617001001.jpg)"></div>
+						<div class="swiper-slide" style="background-image:url(https://aboutbstorage.blob.core.windows.net/aboutbimg/1920180130010253002001.jpg)"></div>
+						<div class="swiper-slide" style="background-image:url(https://aboutbstorage.blob.core.windows.net/aboutbimg/1920180130010734001001.jpg)"></div>
+						<div class="swiper-slide" style="background-image:url(https://aboutbstorage.blob.core.windows.net/aboutbimg/1920180130010758001001.jpg)"></div>
+						<div class="swiper-slide" style="background-image:url(https://aboutbstorage.blob.core.windows.net/aboutbimg/1920180130010857001001.jpg)"></div>
+						<div class="swiper-slide" style="background-image:url(https://aboutbstorage.blob.core.windows.net/aboutbimg/3620150130002695001001.jpg)"></div>
 					</div>
 				</div>
 			</div>
 			<table class="ca-main-right">
 				<tr>
 					<th rowspan="2" class="ca-main-tit2">소재지</th>
-					<td class="ca-main-txt2" colspan="3"><?php echo $result[0]->mul_juso ;?></td>
+					<td class="ca-main-txt2" colspan="3"><?php echo $result[0]->item_juso ;?></td>
 				</tr>
 				<tr style="border-top: none">
-					<td class="ca-main-txt2 color999" colspan="3"><?php echo "[도로명주소자리] / " . $result[0]->mul_juso ;?></td>
+					<td class="ca-main-txt2 color999" colspan="3"><?php echo "[도로명주소자리] / " . $result[0]->item_juso ;?></td>
 				</tr>
 				<tr style="border-top: 1px solid #eee;">
 					<th class="ca-main-tit2" style="width: 20%;">전용면적</th>
@@ -176,12 +161,11 @@
 	</section>
 	<section id="ca-tab-cont">
 		<div class="ca-inbox" style="border-bottom: none;">
-
 			<!-- 물건정보 컨텐츠 -->
 			<div class="ca-mulgun on">
 				<div class="ca-pos-box">
 					<span class="ca-big-tit">소재지</span>
-					<span class="ca-tab-cont-sojaeji"><?php echo $result[0]->mul_juso;?></span>	
+					<span class="ca-tab-cont-sojaeji"><?php echo $result[0]->item_juso;?></span>	
 					<div class="ca-map marginBox"><img src="/public/images/map.png" alt="지도"></div>
 				</div>
 				<div class="marginBox ca-pos-box">
@@ -728,7 +712,7 @@
 				<div class="ca-inbox">
 					<div class="ca-pos-box">
 						<p class="ca-big-tit-500"><?= $result[0]->mul_court_name ?><?= $result[0]->mul_court_gye_name ?></p>
-						<p class="ca-big-tit-400"><?= $result[0]->case_num ?><?= $result[0]->mul_juso ; ?></p>
+						<p class="ca-big-tit-400"><?= $result[0]->case_num ?><?= $result[0]->item_juso ; ?></p>
 
 					</div>
 					<div class="marginBox ca-pos-box">

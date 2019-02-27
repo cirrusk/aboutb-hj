@@ -1,8 +1,22 @@
 @charset "utf-8";
-@import url(core.css);
-@import url(common.css);
-@import url(GDbg.css);
-@import url(GDset.css);
+
+
+/* Swiper Css */
+.swiper-container{
+	
+}
+.gallery-top{
+	height: 70%;
+}
+.gallery-thumbs{
+	height: 30%;
+	padding: 10px 0;
+}
+.swiper-slide{
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+}
 
 #ca-tab-cont>.ca-inbox>div{
 	display: none;
@@ -97,6 +111,7 @@ tbody>tr:last-child{
 .ca-big-tit-400{
 	font-size: 18px;
 	font-weight: 400;
+	color: #999;
 }
 .ca-big-tit-500{
 	font-size: 18px;
@@ -107,6 +122,9 @@ tbody>tr:last-child{
 }
 .color999{
 	color: #999;
+}
+.font16{
+	font-size: 16px;
 }
 .point{
 	font-weight: 500;
@@ -261,27 +279,33 @@ tr.space>td{
 
 /* 메인 */
 #ca-main{
-	height: 440px;
+	/*height: 440px;*/
 	min-height: 440px;
 	padding-top: 18px;
 }
 .ca-main-left{
-	float: left;
-	width: 400px;
-	height: 404px;
+	position: absolute;
+    width: 400px;
+    height: 404px;
+    clear: both;
 }
 .main-img{
+	position: relative;
 	width: 400px;
 	height: 290px;
-	background: url(../images/01_00.png) no-repeat;
 	margin-bottom: 24px;
+}
+.main-img>img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
 }
 .sa-img{
 	width: 125px;
 	height: 91px;
 	margin-right: 12px;
 }
-.ca-main-left>ul>li:last-child{
+/*.ca-main-left>ul>li:last-child{
 	margin-right: 0 !important;
 }
 .ca-main-left>ul>li:nth-child(2){
@@ -292,10 +316,12 @@ tr.space>td{
 }
 .ca-main-left>ul>li:nth-child(4){
 	background: url(../images/01_03.png) no-repeat;
-}
+}*/
 .ca-main-right{
-	float: right;
-	width: 710px;
+	right: 0;
+    margin-left: 440px;
+    width: 710px;
+    clear: both;
 }
 /* 수익률, 원본문서 */
 #ca-revenue{

@@ -309,8 +309,8 @@
                   </ul>
                 </form>
                 </li>
-                <a href="#" class="plusbtn">＋</a>
               </ul>
+              <a href="#" class="plusbtn">＋</a>
             </div>
           </div>
           <!-- sojaeBox -->
