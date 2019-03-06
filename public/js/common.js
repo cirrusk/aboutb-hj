@@ -5,7 +5,7 @@ $(function(){
 	var winH = screen.availHeight;
 
 	console.log(winW+","+winH);
-	sw = 1200;
+	sw = 1280;
 	sh = winH-60;
 
 	ml = (winW-sw)/2;

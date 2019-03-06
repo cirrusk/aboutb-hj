@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
-	<link rel="stylesheet" href="/public/css/jquery-ui.css">
+	<link rel="stylesheet" href="/public/css/jquery-ui.min.css">
 	<link rel="stylesheet" href="/public/css/prettydropdowns.css">
 	<link rel="stylesheet" href="/public/css/toggle-switch.css">
 	<link rel="stylesheet" href="/public/css/jquery-ui-slider-pips.css">
@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="/public/css/ca_view2.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="/public/js/jquery-ui.js"></script>
+	<script src="/public/js/jquery-ui.min.js"></script>
 	<script src="/public/js/datepicker-ko.js"></script>
 	<script src="/public/js/jquery.prettydropdowns.js"></script>
 	<script src="/public/js/jquery-ui-slider-pips.js"></script>
